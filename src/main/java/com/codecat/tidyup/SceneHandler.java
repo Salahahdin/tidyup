@@ -10,13 +10,13 @@ public class SceneHandler {
 
     private Stage stage;
 
-    public SceneHandler(Stage7 stage)
+    public SceneHandler(Stage stage)
     {
         this.stage = stage;
     }
 
     public void changeScene(String filename) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(SceneHandler.class.getResource(filename));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(filename));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setScene(scene);
 

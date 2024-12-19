@@ -16,6 +16,7 @@ public class HelloController {
 
     public HelloController() {
     }
+    public void setSceneHandler(SceneHandler sceneHandler) { this.sceneHandler = sceneHandler; }
 
     public HelloController(Stage stage) {
         this.sceneHandler = new SceneHandler(stage);
