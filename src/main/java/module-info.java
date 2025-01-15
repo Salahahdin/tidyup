@@ -1,4 +1,4 @@
-module com.example.tidyup {
+module com.codecat.tidyup {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -9,7 +9,8 @@ module com.example.tidyup {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires com.almasb.fxgl.all;
 
-    opens com.example.tidyup to javafx.fxml;
-    exports com.example.tidyup;
+    opens com.codecat.tidyup to javafx.fxml;
+    exports com.codecat.tidyup;
 }

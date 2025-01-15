@@ -9,16 +9,25 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage primaryStage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        HelloController controller = new HelloController(stage);
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.setTitle("TidyUp");
-        stage.setScene(scene);
-        stage.show();
+        // Get the controller instance
+        HelloController controller = fxmlLoader.getController();
+        if (controller == null) {
+            throw new IllegalStateException("Controller was not initialized properly.");
+        }
+
+        controller.setSceneHandler(new SceneHandler(primaryStage));
+
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("TidyUp");
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
         launch();
+
+
     }
 }

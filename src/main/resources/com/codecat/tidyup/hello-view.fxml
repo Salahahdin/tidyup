@@ -4,12 +4,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="409.0" prefWidth="742.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.14-internal" fx:controller="com.codecat.tidyup.HelloController">
+<VBox alignment="CENTER" prefHeight="409.0" prefWidth="742.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codecat.tidyup.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
       <Label prefHeight="17.0" prefWidth="128.0" />
-      <Button mnemonicParsing="false" text="Zacznij sprzątanie" />
+      <Button fx:id="startButton" mnemonicParsing="false" onAction="#onHelloButtonClick" text="Zacznij sprzątanie" />
    </children>
 </VBox>
