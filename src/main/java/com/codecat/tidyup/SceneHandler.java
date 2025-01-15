@@ -20,5 +20,14 @@ public class SceneHandler {
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setScene(scene);
 
+
+    }
+    public void wrapChangeScene(String filename, double width, double height, boolean resizable, String title) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(filename));
+        Scene scene = new Scene(fxmlLoader.load(), width, height);
+        stage.setScene(scene);
+        stage.setResizable(resizable);
+        stage.setTitle(title);
+        stage.show();
     }
 }
