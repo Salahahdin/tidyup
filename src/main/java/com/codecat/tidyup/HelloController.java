@@ -16,13 +16,20 @@ public class HelloController {
 
     public HelloController() {
     }
+    public void setSceneHandler(SceneHandler sceneHandler) { this.sceneHandler = sceneHandler; }
 
+    /*
     public HelloController(Stage stage) {
         this.sceneHandler = new SceneHandler(stage);
     }
+
+*/
     @FXML
     protected void onHelloButtonClick() throws IOException {
-      sceneHandler.changeScene("homescreen.fxml");
+        if (sceneHandler == null) {
+            throw new IllegalStateException("SceneHandler is not initialized.");
+        }
+      sceneHandler.wrapChangeScene("homescreen.fxml", 800, 600, true, "TidyUp");
     }
 
 }
