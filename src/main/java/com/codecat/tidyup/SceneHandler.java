@@ -16,10 +16,15 @@ public class SceneHandler {
     }
 
     public void changeScene(String filename) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(filename));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.setScene(scene);
-
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(filename));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+            stage.setScene(scene);
+            stage.show(); // Ensure the stage is shown
+        } catch (IOException e) {
+            // Handle the exception
+            e.printStackTrace();
+        }
 
     }
     public void wrapChangeScene(String filename, double width, double height, boolean resizable, String title) throws IOException {

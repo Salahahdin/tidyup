@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="161.0" prefWidth="178.0">
+         <children>
+            <ChoiceBox fx:id="Category" layoutX="20.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+            <ChoiceBox fx:id="Period" layoutX="225.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+            <ChoiceBox fx:id="Notification" layoutX="436.0" layoutY="13.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
